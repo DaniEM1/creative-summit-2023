@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>is-corner-scroll</title>
+	<style>
+		html {
+			height:100%;
+		}
+		body {
+			margin:0;
+			height:100%;
+		}
+	</style>
+	<!-- copy these lines to your document head: -->
+
+	<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=320" />
+
+	<style>
+      .png-seq-element,
+      .png-seq-element * {
+                image-rendering: auto !important;
+      }
+</style>
+	
+
+	<!-- end copy -->
+  </head>
+  <body>
+	<!-- copy these lines to your document: -->
+
+	<div id="iscornerscroll_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:100%;overflow:hidden;">
+		<script type="text/javascript" charset="utf-8" src="is-corner-scroll.hyperesources/iscornerscroll_hype_generated_script.js?77707"></script>
+	</div>
+
+	<!-- end copy -->
+	
+
+
+	<!-- text content for search engines: -->
+
+	<div style="display:none" aria-hidden=true>
+
+		<div></div>
+		<div>SWIPE TO LEARN MORE</div>
+		<div> </div>
+		<div>Swipe left for more</div>
+
+	</div>
+
+	<!-- end text content: -->
+	<script type="text/javascript">
+		
+		const inImage = window.top.document.querySelector('#in-screen-corner');
+		var currentTime = null;
+
+		function callback(mutationsList, observer) {
+			// console.log('Mutations:', mutationsList)
+			// console.log('Observer:', observer)
+			mutationsList.forEach(mutation => {
+			if (mutation.attributeName === 'class') {
+				console.log('class changed');
+				// setTimeout(() => {
+					// currentTime = 0;
+					var hypeDocument = Object.values(HYPE.documents)[0];
+					hypeDocument.goToTimeInTimelineNamed(0, 'Main Timeline');
+					hypeDocument.goToTimeInTimelineNamed(0, 'Scroll Timeline');
+					hypeDocument.startTimelineNamed('Main Timeline', hypeDocument.kDirectionForward);
+					window.top.addEventListener('scroll', handleScroll )
+					// }, 0);
+				}
+			})
+		}
+		
+		const mutationObserver = new MutationObserver(callback)
+		mutationObserver.observe(inImage, { attributes: true })
+		
+		const handleScroll = (e) => {
+			
+			var hypeDocument = Object.values(HYPE.documents)[0];
+			currentTime = hypeDocument.currentTimeInTimelineNamed('Main Timeline');
+			// console.log((window.top.scrollY)/1000);
+			var sensibility = 500;
+
+			if( currentTime >= 0.93 ){
+				// console.log('scriolllll!!!');
+				var timeScrollTimeline = window.top.scrollY/sensibility;
+				// console.log(timeScrollTimeline);
+				hypeDocument.goToTimeInTimelineNamed( timeScrollTimeline , 'Scroll Timeline');
+			}
+		}
+
+
+	</script>
+
+  </body>
+</html>

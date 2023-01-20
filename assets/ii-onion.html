@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>ii-onion</title>
+	<style>
+		html {
+			height:100%;
+		}
+		body {
+			margin:0;
+			height:100%;
+		}
+	</style>
+	<!-- copy these lines to your document head: -->
+
+	<meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=900" />
+
+	<style>
+      .png-seq-element,
+      .png-seq-element * {
+                image-rendering: auto !important;
+      }
+</style>
+	
+
+	<!-- end copy -->
+  </head>
+  <body>
+	<!-- copy these lines to your document: -->
+
+	<div id="iionion_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:100%;overflow:hidden;">
+		<script type="text/javascript" charset="utf-8" src="ii-onion.hyperesources/iionion_hype_generated_script.js?23389"></script>
+	</div>
+
+	<!-- end copy -->
+	
+
+
+	<!-- text content for search engines: -->
+
+	<div style="display:none" aria-hidden=true>
+
+		<div></div>
+		<div>NOTE: Please make sure to add the Unique Element ID gg_video_600 or gg_video_300 to the gg_video layer when duplicating isxv Scenes.
+</div>
+		<div>Swipe up to Expand ^</div>
+		<div>
+</div>
+		<div>Hover to expand</div>
+
+	</div>
+
+	<!-- end text content: -->
+
+	<script type="text/javascript">
+		
+		const inImage = window.top.document.querySelector('#in-image');
+
+		function callback(mutationsList, observer) {
+			// console.log('Mutations:', mutationsList)
+			// console.log('Observer:', observer)
+			mutationsList.forEach(mutation => {
+				if (mutation.attributeName === 'class') {
+					// console.log('class changed');
+					setTimeout(() => {
+						var hypeDocument = Object.values(HYPE.documents)[0];
+						hypeDocument.goToTimeInTimelineNamed(0, 'Main Timeline');
+						hypeDocument.startTimelineNamed('Main Timeline', hypeDocument.kDirectionForward);
+						
+					}, 0);
+				}
+			})
+		}
+
+		const mutationObserver = new MutationObserver(callback)
+
+		mutationObserver.observe(inImage, { attributes: true })
+
+	</script>
+
+  </body>
+</html>
