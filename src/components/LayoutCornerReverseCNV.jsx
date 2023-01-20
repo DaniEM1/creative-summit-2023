@@ -31,7 +31,7 @@ export const LayoutCornerReverseCNV = () => {
                 className="gg-article__media-container"
               >
                 <div id="gg-article__media"></div>
-                <iframe src='../assets/reverse-cnv.html' id='in-image' className='w-full h-full absolute bottom-0'>
+                <iframe src='../src/assets/reverse-cnv.html' id='in-image' className='w-full h-full absolute bottom-0'>
                   {/* <InImageScreen position={'absolute'} visibility={visibilityImage}/> */}
                 </iframe>
               </div>

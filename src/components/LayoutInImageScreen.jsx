@@ -42,7 +42,6 @@ export const LayoutInImageScreen = () => {
 
   const initialRender = useRef(true)
 
-  
   useEffect(() => {
     
     // console.log('screen: ', visibilityScreen);
@@ -70,8 +69,6 @@ export const LayoutInImageScreen = () => {
 
   }, [visibilityScreen])
   
-
-
   return (
     <>
     
@@ -91,7 +88,7 @@ export const LayoutInImageScreen = () => {
                 className="gg-article__media-container"
               >
                 <div id="gg-article__media"></div>
-                <iframe src='../assets/ii-onion.html' id='in-image' className={`w-full h-full absolute bottom-0 ${visibilityImage}`}>
+                <iframe src='../src/assets/ii-onion.html' id='in-image' className={`w-full h-full absolute bottom-0 ${visibilityImage}`}>
                   {/* <InImageScreen position={'absolute'} visibility={visibilityImage}/> */}
                 </iframe>
               </div>
@@ -105,7 +102,7 @@ export const LayoutInImageScreen = () => {
           </div>
         </article>
         <FooterContent />
-        <iframe src="../assets/is-onion.html" id='in-screen' className={`w-full h-full fixed bottom-0 ${visibilityScreen}`}></iframe>
+        <iframe src="../src/assets/is-onion.html" id='in-screen' className={`w-full h-full fixed bottom-0 ${visibilityScreen}`}></iframe>
         {/* <InImageScreen position={'fixed'} visibility={visibilityScreen}/> */}
       </div>
     </>

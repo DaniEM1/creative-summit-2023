@@ -61,7 +61,7 @@ export const LayoutCornerScroller = () => {
                 className="gg-article__media-container"
               >
                 <div id="gg-article__media"></div>
-                <iframe src='../assets/ii-corner-scroll.html' id='in-image-corner' className={`w-full h-full absolute bottom-0 ${visibilityImage}`}>
+                <iframe src='../src/assets/ii-corner-scroll.html' id='in-image-corner' className={`w-full h-full absolute bottom-0 ${visibilityImage}`}>
                 </iframe>
               </div>
               <ArticleContent />
@@ -74,7 +74,7 @@ export const LayoutCornerScroller = () => {
           </div>
         </article>
         <FooterContent />
-        <iframe src="../assets/is-corner-scroll.html" id='in-screen-corner' className={`w-full h-full fixed bottom-0 ${visibilityScreen}`}></iframe>
+        <iframe src="../src/assets/is-corner-scroll.html" id='in-screen-corner' className={`w-full h-full fixed bottom-0 ${visibilityScreen}`}></iframe>
       </div>
     </>
   );
